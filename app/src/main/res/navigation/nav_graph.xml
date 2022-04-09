@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.bhaskar.androidtest2.ui.fragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_departmentFragment"
+            app:destination="@id/departmentFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:popEnterAnim="@anim/slide_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/departmentFragment"
+        android:name="com.bhaskar.androidtest2.ui.fragments.DepartmentFragment"
+        android:label="fragment_department"
+        tools:layout="@layout/fragment_department" >
+        <action
+            android:id="@+id/action_departmentFragment_to_emailPhoneFragment"
+            app:destination="@id/emailPhoneFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:popEnterAnim="@anim/slide_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailPhoneFragment"
+        android:name="com.bhaskar.androidtest2.ui.fragments.EmailPhoneFragment"
+        android:label="fragment_email_phone"
+        tools:layout="@layout/fragment_email_phone" >
+        <action
+            android:id="@+id/action_emailPhoneFragment_to_nameFragment"
+            app:destination="@id/nameFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:popEnterAnim="@anim/slide_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameFragment"
+        android:name="com.bhaskar.androidtest2.ui.fragments.NameFragment"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" >
+        <action
+            android:id="@+id/action_nameFragment_to_jobFragment"
+            app:destination="@id/jobFragment"
+            app:enterAnim="@anim/slide_enter"
+            app:popEnterAnim="@anim/slide_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.bhaskar.androidtest2.ui.fragments.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" />
+</navigation>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="onItemClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="data"
+            type="com.bhaskar.androidtest2.models.WelcomeScreenModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.WelcomeFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welcomeHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_what_are_you_looking_for"
+            android:textSize="27sp"
+            android:fontFamily="@font/lato_regular"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcomeFirstButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="13dp"
+            app:cornerRadius="22dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="18sp"
+            android:onClick="@{onItemClick}"
+            android:text="@string/lead_generation_bots"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeHeading" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcomeSecondButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            app:cornerRadius="22dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:text="@string/multi_step_forms"
+            android:onClick="@{onItemClick}"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeFirstButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcomeThirdButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:padding="13dp"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:cornerRadius="22dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/integrations"
+            android:onClick="@{onItemClick}"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeSecondButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
