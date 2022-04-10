@@ -30,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/box_stroke_color"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/emailPhoneHeading">
@@ -39,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_address"
+
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/hint_color" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -49,6 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/box_stroke_color"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">

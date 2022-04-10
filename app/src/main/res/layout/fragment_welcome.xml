@@ -10,8 +10,8 @@
             name="onItemClick"
             type="android.view.View.OnClickListener" />
         <variable
-            name="data"
-            type="com.bhaskar.androidtest2.models.WelcomeScreenModel" />
+            name="viewModel"
+            type="com.bhaskar.androidtest2.viewmodels.WelcomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

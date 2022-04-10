@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="hint_color">#707070</color>
+
+    <color name="button_tint">#FFEB3B</color>
+    <color name="box_stroke_color">#2196F3</color>
+    <color name="green">#4CAF50</color>
 </resources>
