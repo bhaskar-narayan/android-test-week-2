@@ -15,7 +15,10 @@ import androidx.navigation.Navigation
 import com.bhaskar.androidtest2.R
 import com.bhaskar.androidtest2.databinding.FragmentEmailPhoneBinding
 import com.bhaskar.androidtest2.objects.Constant
+import com.bhaskar.androidtest2.objects.Constant.MAIL
+import com.bhaskar.androidtest2.objects.Constant.PHONE
 import com.bhaskar.androidtest2.objects.FragmentPosition
+import java.util.regex.Pattern
 
 class EmailPhoneFragment : Fragment() {
     private lateinit var binding: FragmentEmailPhoneBinding
@@ -41,14 +44,33 @@ class EmailPhoneFragment : Fragment() {
         with (binding) {
             onItemClick = View.OnClickListener { view ->
                 when (view.id) {
-                    R.id.emailPhoneNextButton -> Navigation.findNavController(view).navigate(R.id.action_emailPhoneFragment_to_nameFragment)
+                    R.id.emailPhoneNextButton -> {
+                        val emailPattern = Pattern.compile(MAIL)
+                        val phonePattern = Pattern.compile(PHONE)
+                        if (sharedCredentials.getString("email", null)
+                                ?.let { emailPattern.matcher(it).matches() } == false
+                        ) {
+                            emailLayout.error = "Invalid email"
+                            return@OnClickListener
+                        }
+                        if (sharedCredentials.getString("phone", null)
+                                ?.let { phonePattern.matcher(it).matches() } == false
+                        ) {
+                            phoneLayout.error = "Invalid number"
+                            return@OnClickListener
+                        }
+                        Navigation.findNavController(view)
+                            .navigate(R.id.action_emailPhoneFragment_to_nameFragment)
+                    }
                 }
             }
             emailPhoneEditEmail.addTextChangedListener {
-                sharedEdit.putString("email", it.toString()).apply()
+                emailLayout.error = null
+                sharedEdit.putString("email", it.toString().trim()).apply()
             }
             emailPhoneEditPhone.addTextChangedListener {
-                sharedEdit.putString("phone", it.toString()).apply()
+                phoneLayout.error = null
+                sharedEdit.putString("phone", it.toString().trim()).apply()
             }
         }
     }

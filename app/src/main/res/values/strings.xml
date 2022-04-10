@@ -21,4 +21,7 @@
     <string name="company_name">Company name*</string>
     <string name="job_title">Job title*</string>
     <string name="request_demo">Request demo</string>
+    <string name="your_data">Your Data:</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="space"> </string>
 </resources>

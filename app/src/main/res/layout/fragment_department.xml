@@ -29,15 +29,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/lato_regular"
             android:padding="13dp"
             android:text="@string/marketing"
             android:textAllCaps="false"
-            android:textSize="18sp"
+            android:textSize="19sp"
             app:cornerRadius="22dp"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/departmentHeading" />
 
         <com.google.android.material.button.MaterialButton
@@ -47,29 +45,25 @@
             android:padding="13dp"
             app:cornerRadius="22dp"
             android:textAllCaps="false"
-            android:fontFamily="@font/lato_bold"
-            android:textSize="18sp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="19sp"
             android:layout_marginTop="5dp"
             android:text="@string/sales"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/departmentFirstButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/departmentThirdButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/lato_regular"
             android:padding="13dp"
             android:textAllCaps="false"
-            android:textSize="18sp"
+            android:textSize="19sp"
             app:cornerRadius="22dp"
             android:layout_marginTop="5dp"
             android:text="@string/customer_service"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/departmentSecondButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

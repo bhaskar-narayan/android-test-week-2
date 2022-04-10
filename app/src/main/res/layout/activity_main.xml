@@ -7,9 +7,6 @@
         <variable
             name="onItemClick"
             type="android.view.View.OnClickListener" />
-        <variable
-            name="viewModel"
-            type="com.bhaskar.androidtest2.viewmodels.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,15 +62,16 @@
             android:id="@+id/mainProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            app:trackCornerRadius="5dp"
+            android:layout_marginTop="25dp"
             android:max="5"
+            android:scaleY="1.5"
             app:indicatorColor="@color/green"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/mainBackButton" />
+            app:layout_constraintTop_toBottomOf="@+id/mainCloseButton"
+            app:trackCornerRadius="20dp" />
 
         <ScrollView
             android:layout_width="0dp"

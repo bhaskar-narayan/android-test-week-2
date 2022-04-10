@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onItemClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".8"
+            app:layout_constraintHeight_percent=".8"
+            app:cardBackgroundColor="@color/card_color"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="30dp"
+                    android:padding="20dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_black"
+                        android:text="@string/your_data"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="18sp"
+                        android:text="@string/welcome_what_are_you_looking_for"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/welcomeAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/great_what_department_do_you_work_in"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/welcomeAnswer" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/departmentAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/what_is_the_email_and_phone_number_that_we_can_reach_you_the_best"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/departmentAnswer" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/emailPhoneAnswerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/emailPhoneAnswerPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailPhoneAnswerEmail" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/could_you_tell_us_a_bit_more_about_yourself"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailPhoneAnswerPhone" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/nameAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/thanks_just_a_few_more_details_and_we_are_done"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toBottomOf="@+id/nameAnswer" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/jobAnswerCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView6" />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/jobAnswerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        tools:text="Hello"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@+id/jobAnswerCompany" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/dismissButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:padding="13dp"
+                        app:cornerRadius="22dp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="16sp"
+                        android:text="@string/dismiss"
+                        android:onClick="@{onItemClick}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/jobAnswerTitle" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

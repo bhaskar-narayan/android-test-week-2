@@ -25,15 +25,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/firstNameLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/box_stroke_color"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/nameHeading">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -46,16 +44,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
+            android:id="@+id/lastNameLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/box_stroke_color"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            app:layout_constraintTop_toBottomOf="@+id/firstNameLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameEditSecondName"
@@ -71,16 +67,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/lato_regular"
             android:padding="13dp"
             android:textAllCaps="false"
-            android:textSize="18sp"
+            android:textSize="19sp"
             app:cornerRadius="22dp"
             android:text="@string/next"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/lastNameLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -9,9 +9,6 @@
         <variable
             name="onItemClick"
             type="android.view.View.OnClickListener" />
-        <variable
-            name="viewModel"
-            type="com.bhaskar.androidtest2.viewmodels.WelcomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,12 +34,10 @@
             android:padding="13dp"
             app:cornerRadius="22dp"
             android:textAllCaps="false"
-            android:fontFamily="@font/lato_bold"
-            android:textSize="18sp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="19sp"
             android:onClick="@{onItemClick}"
             android:text="@string/lead_generation_bots"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/welcomeHeading" />
 
         <com.google.android.material.button.MaterialButton
@@ -52,29 +47,25 @@
             android:padding="13dp"
             app:cornerRadius="22dp"
             android:textAllCaps="false"
-            android:fontFamily="@font/lato_bold"
-            android:textSize="18sp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="19sp"
             android:layout_marginTop="5dp"
             android:text="@string/multi_step_forms"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/welcomeFirstButton" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/welcomeThirdButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/lato_regular"
             android:padding="13dp"
             android:textAllCaps="false"
-            android:textSize="18sp"
+            android:textSize="19sp"
             app:cornerRadius="22dp"
             android:layout_marginTop="5dp"
             android:text="@string/integrations"
             android:onClick="@{onItemClick}"
-            app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintStart_toStartOf="@+id/guideline7"
             app:layout_constraintTop_toBottomOf="@+id/welcomeSecondButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
